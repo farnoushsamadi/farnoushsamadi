@@ -16,6 +16,24 @@
             overflow-x: hidden;
             scroll-behavior: smooth;
         }
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دوره آموزشی طراحی ویژه آزمون عملی | فرنوش صمدی</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700;900&display=swap');
+
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #3b3155;
+            color: #ffffff;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
 
         .text-accent {
             color: #ff5757;
@@ -83,6 +101,15 @@
             transform: translateY(-10px);
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
+
+        /* افکت بزرگنمایی نرم برای تصاویر هنگام لمس یا هاور */
+        .zoom-img {
+            transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s ease;
+        }
+        .zoom-img:hover {
+            transform: scale(1.03);
+            box-shadow: 0 25px 35px -10px rgba(0, 0, 0, 0.3);
+        }
     </style>
 </head>
 <body class="antialiased selection:bg-accent selection:text-white">
@@ -126,7 +153,7 @@
             <div class="md:w-1/2 flex justify-center relative order-1 md:order-2 mb-12 md:mb-0">
                 <div class="absolute w-[300px] h-[300px] md:w-[500px] md:h-[500px] rounded-full bg-[#2f2744] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 -z-10 shadow-inner"></div>
                 <div class="w-64 h-80 md:w-[350px] md:h-[450px] bg-[#4a3e6b] rounded-t-full shadow-2xl relative overflow-hidden group border-4 border-[#3b3155]">
-                    <!-- عکس اصلی مدرس -->
+                    <!-- عکس اصلی پرتره مدرس -->
                     <img src="1786644260895.png" alt="فرنوش صمدی - مدرس دوره" class="w-full h-full object-cover">
                     <div class="absolute inset-0 bg-gradient-to-t from-[#3b3155] via-transparent to-transparent opacity-60"></div>
                 </div>
@@ -141,14 +168,15 @@
         <div class="max-w-6xl mx-auto section-container fade-in-up">
             
             <div class="flex flex-col md:flex-row items-center gap-16">
-                <!-- Sample Work Image -->
-                <div class="md:w-1/2 relative w-full group">
-                    <div class="absolute -top-8 -right-8 w-2/3 h-full bg-[#e5e0f0] -z-10 transition-transform duration-500 group-hover:translate-x-4 group-hover:-translate-y-4"></div>
-                    
-                    <div class="w-full h-96 md:h-[550px] shadow-lg overflow-hidden relative rounded-xl">
-                        <!-- تصویر نمونه کار -->
-                        <img src="IMG_20260404_201742.jpg" alt="نمونه کار هنرجویان" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                        <div class="absolute inset-0 border-2 border-dashed border-gray-300 pointer-events-none"></div>
+                <!-- Sample Work Images Stacked (Vertical) with Zoom Effect -->
+                <div class="md:w-1/2 relative w-full flex flex-col gap-6">
+                    <!-- نمونه کار اول: مترو -->
+                    <div class="w-full bg-white p-3 rounded-2xl shadow-lg border border-gray-200 zoom-img">
+                        <img src="1000097003.jpg" alt="نمونه کار مترو" class="w-full h-auto max-h-[400px] object-contain rounded-xl">
+                    </div>
+                    <!-- نمونه کار دوم: شبیه‌خوانی -->
+                    <div class="w-full bg-white p-3 rounded-2xl shadow-lg border border-gray-200 zoom-img">
+                        <img src="1000079220.jpg" alt="نمونه کار شبیه‌خوانی" class="w-full h-auto max-h-[400px] object-contain rounded-xl">
                     </div>
                     <div class="deco-square -bottom-6 -left-6"></div>
                 </div>
@@ -341,4 +369,4 @@
                         <p class="text-gray-600 mb-8 leading-relaxed h-16">ویژه هنرجویان خودخوان. مناسب هنرجویانی که پایه طراحی مناسبی دارند و می‌خواهند مستقل تمرین کنند.</p>
                         
                         <div class="mb-10 space-y-5 text-gray-700 font-medium border-t border-b border-gray-100 py-8">
-                            <p class="flex items-start gap-3"><i class="
+                            <p class="flex items-start gap-3"><i class="fas fa-check-circle text-green-500 mt-1 text-lg"></i
